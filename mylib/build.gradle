@@ -32,17 +32,17 @@ dependencies {
 
 
 ext {
-    bintrayRepo = 'maven'
+    bintrayRepo = 'kabuse'
     bintrayName = 'mylib'
 
     publishedGroupId = 'com.lib'
     libraryName = 'libtest'
-    artifact = 'test'
+    artifact = 'mylib'
 
     libraryDescription = 'A libtest on Android'
 
-    siteUrl = 'https://gitee.com/natanic/testp'
-    gitUrl = 'https://gitee.com/natanic/testp.git'
+    siteUrl = 'https://github.com/Natanic/mylibtest'
+    gitUrl = 'https://github.com/Natanic/mylibtest.git'
 
     libraryVersion = '1.1.0'
 
