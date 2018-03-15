@@ -44,7 +44,7 @@ ext {
     siteUrl = 'https://github.com/Natanic/mylibtest'
     gitUrl = 'https://github.com/Natanic/mylibtest.git'
 
-    libraryVersion = '1.1.0'
+    libraryVersion = '1.1.1'
 
     developerId = 'deer'
     developerName = 'zdeer'
