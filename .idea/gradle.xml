@@ -9,7 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/loansdk" />
             <option value="$PROJECT_DIR$/mylib" />
+            <option value="$PROJECT_DIR$/using" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

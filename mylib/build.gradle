@@ -30,31 +30,31 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-
-ext {
-    bintrayRepo = 'kabuse'
-    bintrayName = 'mylib'
-
-    publishedGroupId = 'com.lib'
-    libraryName = 'libtest'
-    artifact = 'mylib'
-
-    libraryDescription = 'A libtest on Android'
-
-    siteUrl = 'https://github.com/Natanic/mylibtest'
-    gitUrl = 'https://github.com/Natanic/mylibtest.git'
-
-    libraryVersion = '1.1.1'
-
-    developerId = 'deer'
-    developerName = 'zdeer'
-    developerEmail = 'Lulu.Natan@Gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
-
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+//
+//ext {
+//    bintrayRepo = 'kabuse'
+//    bintrayName = 'mylib'
+//
+//    publishedGroupId = 'com.lib'
+//    libraryName = 'libtest'
+//    artifact = 'mylib'
+//
+//    libraryDescription = 'A libtest on Android'
+//
+//    siteUrl = 'https://github.com/Natanic/mylibtest'
+//    gitUrl = 'https://github.com/Natanic/mylibtest.git'
+//
+//    libraryVersion = '1.1.1'
+//
+//    developerId = 'deer'
+//    developerName = 'zdeer'
+//    developerEmail = 'Lulu.Natan@Gmail.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+//
+//
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

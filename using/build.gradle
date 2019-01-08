@@ -1,0 +1,107 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 110
+        versionName "1.1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    compile 'com.squareup:otto:1.3.8'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/picasso-2.5.2.jar')
+    compile 'com.gyf.barlibrary:barlibrary:2.2.5'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.7.0'
+    compile files('libs/gson-2.5.jar')
+    compile files('libs/jcore-android-1.1.5.jar')
+    compile files('libs/jpush-android-3.0.7.jar')
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile files('libs/umeng-analytics-v6.0.9.jar')
+    compile files('libs/zxing.jar')
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
+    compile 'pub.devrel:easypermissions:1.0.0'
+    compile 'com.aliyun.dpa:oss-android-sdk:2.4.3'
+    compile 'com.alibaba:fastjson:1.1.59.android'
+    compile files('libs/fm-sdk-3.1.1.jar')
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+    }
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+}
+
+ext {
+    bintrayRepo = 'kabuse'
+    bintrayName = 'using'
+
+    publishedGroupId = 'com.youjie.using'
+    libraryName = 'useinglib'
+    artifact = 'using'
+
+    libraryDescription = 'A library for LoanSDK on Android'
+
+    siteUrl = 'https://github.com/Natanic/mylibtest'
+    gitUrl = 'https://github.com/Natanic/mylibtest.git'
+
+    libraryVersion = '1.1.2'
+
+    developerId = 'deer'
+    developerName = 'zdeer'
+    developerEmail = 'Lulu.Natan@Gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+
+}
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

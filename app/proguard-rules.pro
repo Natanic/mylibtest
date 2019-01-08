@@ -23,3 +23,16 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#support.v4/v7包不混淆
+-keep class android.support.** { *; }
+-keep class android.support.v4.** { *; }
+-keep public class * extends android.support.v4.**
+-keep interface android.support.v4.app.** { *; }
+-keep class android.support.v7.** { *; }
+-keep public class * extends android.support.v7.**
+-keep interface android.support.v7.app.** { *; }
+-dontwarn android.support.**    # 忽略警告
+-keep class android.arch.lifecycle.** { *; }
+-dontwarn android.arch.**
+-keep class com.onesignal.** { *; }

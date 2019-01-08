@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="j2v8-3.1.6">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../sited/build/intermediates/exploded-aar/com.eclipsesource.j2v8/j2v8/3.1.6/res" />
+      <root url="jar://$PROJECT_DIR$/../sited/build/intermediates/exploded-aar/com.eclipsesource.j2v8/j2v8/3.1.6/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
