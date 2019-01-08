@@ -1,1 +1,3 @@
-include ':app', ':mylib', ':using'/*, ':Snacks', ':springview', ':llpay',*/ ,':loansdk'
+include ':app'
+include ':verlib', ':mylib', ':using' //通过Bintray 上传maven远程仓库
+include 'nexuslocaltest' //nexus 本地库
