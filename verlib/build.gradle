@@ -37,3 +37,49 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.11.0'
     compile 'com.google.code.gson:gson:2.8.5'
 }
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+}
+
+ext {
+    bintrayRepo = 'hdkuse'
+    bintrayName = 'verlib'
+
+    publishedGroupId = 'com.hdk.lib'
+    libraryName = 'hdk'
+    artifact = 'verlib'
+
+    libraryDescription = 'A library for LoanSDK on Android'
+
+    siteUrl = 'https://github.com/Natanic/mylibtest'
+    gitUrl = 'https://github.com/Natanic/mylibtest.git'
+
+    libraryVersion = '1.1.2'
+
+    developerId = 'deer'
+    developerName = 'zdeer'
+    developerEmail = 'Lulu.Natan@Gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+
+}
+
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
